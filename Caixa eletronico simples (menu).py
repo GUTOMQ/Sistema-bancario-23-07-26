@@ -31,12 +31,26 @@ def sacar_dinheiro():
 
 def main():
     while True:
-       exibir_banco()
-    opcao = input("Escolha uma opção: ")
-    if opcao == "1":
-        consultar_saldo()
-    elif opcao == "2":
-        depositar_dinheiro()
-    elif opcao == "3":  
-        sacar_dinheiro()
-        
+        exibir_banco()
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            consultar_saldo()
+
+        elif opcao == "2":
+            depositar_dinheiro()
+
+        elif opcao == "3":
+            sacar_dinheiro()
+
+        elif opcao == "4":
+            print("\nExtrato não disponível no momento.")
+
+        elif opcao == "5":
+            print("\nSaindo do sistema. Obrigado por utilizar o Caixa Eletrônico.")
+            break
+
+        else:
+            print("\nOpção inválida. Por favor, escolha uma opção válida.")
+main()

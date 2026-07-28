@@ -1,0 +1,1 @@
+Sistema bancário: Caixa eletrônico

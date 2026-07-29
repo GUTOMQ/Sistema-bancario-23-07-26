@@ -87,24 +87,21 @@ def ver_extrato():
     print(f"\nSaldo atual: R$ {saldo:.2f}")
 
 def ver_movimentacoes():
-        print("\n===== MOVIMENTAÇÕES =====")
-        import matplotlib.pyplot as plt
+ # 1. Define your data
+    x = [datetime.now().strftime("%d/%m/%Y")] #[1, 2, 3, 4, 5]
+    y = [float(f"{saldo:.2f}")] #[2, 4, 6, 8, 10]
 
-        # 1. Define your data
-        x = [1, 2, 3, 4, 5]
-        y = [2, 4, 6, 8, 10]
+    # 2. Create the plot type
+    plt.plot(x, y, color="red", linestyle="--", marker="o")
 
-        # 2. Create the plot type
-        plt.plot(x, y, color="blue", linestyle="--", marker="o")
+    # 3. Add titles and axis labels
+    plt.title(f"HISTÓRICO DO SALDO ({datetime.now().strftime('%d/%m/%Y às %H:%M:%S')})")
+    plt.xlabel("DATA")
+    plt.ylabel("SALDO (R$)")
 
-        # 3. Add titles and axis labels
-        plt.title("Sample Line Chart")
-        plt.xlabel("X Axis Label")
-        plt.ylabel("Y Axis Label")
-
-        # 4. Display the plot window
-        plt.show()
-        pass
+    # 4. Display the plot window
+    plt.show()
+    pass
                 
 def main():
     while True:
